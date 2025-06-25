@@ -1,17 +1,18 @@
 import { fileSystem } from './fileSystem';
 import { portfolioData } from './portfolioData';
 
-const helpText = `
-Available commands:
+const helpText = `Available commands:
 - help          : Show this help message
 - ls            : List directory contents
 - cd [dir]      : Change directory
 - cat [file]    : Display file contents
 - clear         : Clear the terminal
-- about         : About me
-- skills        : My skills
-- projects      : My projects
-- contact       : Contact information
+- whoami        : Display user information
+`;
+
+const whoamiText = `Faza Tegar Balintra - 21 years old
+Web Developer - React Enthusiast
+I love creating interactive and user-friendly applications.
 `;
 
 export const executeCommand = (command, currentDir, setCurrentDir) => {
@@ -35,17 +36,20 @@ export const executeCommand = (command, currentDir, setCurrentDir) => {
     case 'clear':
       return 'CLEAR'; // Special case handled in Terminal component
     
-    case 'about':
-      return portfolioData.about;
+    case 'whoami':
+      return whoamiText;
+
+    // case 'about':
+    //   return portfolioData.about;
     
-    case 'skills':
-      return portfolioData.skills.join(', ');
+    // case 'skills':
+    //   return portfolioData.skills.join(', ');
     
-    case 'projects':
-      return portfolioData.projects.map(p => `${p.name}: ${p.description}`).join('\n');
+    // case 'projects':
+    //   return portfolioData.projects.map(p => `${p.name}: ${p.description}`).join('\n');
     
-    case 'contact':
-      return portfolioData.contact.join('\n');
+    // case 'contact':
+    //   return portfolioData.contact.join('\n');
     
     default:
       return `Command not found: ${cmd}. Type "help" for available commands.`;
