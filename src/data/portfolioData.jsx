@@ -21,7 +21,7 @@ export const portfolioData = {
     
     contact: [
       'Email: me@example.com',
-      'GitHub: github.com/username',
+      'GitHub: github.com/fazategarb',
       'LinkedIn: linkedin.com/in/username',
       'Twitter: @username'
     ]

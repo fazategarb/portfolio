@@ -16,14 +16,27 @@ export const fileSystem = {
     'projects': {
         type: 'dir',
         contents: {
-        'project1.txt': {
-            type: 'file',
-            content: `${portfolioData.projects[0].name}\n\n${portfolioData.projects[0].description}`
-        },
-        'project2.txt': {
-            type: 'file',
-            content: `${portfolioData.projects[1].name}\n\n${portfolioData.projects[1].description}`
+            'project1.txt': {
+                type: 'file',
+                content: `${portfolioData.projects[0].name}\n${portfolioData.projects[0].description}`
+            },
+            'project2.txt': {
+                type: 'file',
+                content: `${portfolioData.projects[1].name}\n${portfolioData.projects[1].description}`
+            }
         }
+    },
+    'hobby': {
+        type: 'dir',
+        contents: {
+            'hobby1.txt': {
+                type: 'file',
+                content: 'I love coding and building projects in my free time.'
+            },
+            'hobby2.txt': {
+                type: 'file',
+                content: 'I enjoy hiking and exploring nature.'
+            }
         }
     },
 };
